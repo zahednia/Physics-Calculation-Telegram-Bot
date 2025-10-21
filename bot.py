@@ -86,25 +86,25 @@ def generate_plot(t, s, t_mid_v, v_avg, t_mid_a, a_avg):
 
     # s(t)
     ax1.plot(t, s, marker='o', label='s(t)')
-    ax1.set_xlabel("زمان (T)")
-    ax1.set_ylabel("مکان (X)")
-    ax1.set_title("نمودار زمان-مکان")
+    ax1.set_xlabel("(T)")
+    ax1.set_ylabel("(X)")
+    ax1.set_title("(Time vs. Position Plot)")
     ax1.grid(True)
 
     # v_avg در زمان‌های میانی
     if len(v_avg) > 0:
         ax2.plot(t_mid_v, v_avg, marker='o', label='v_avg')
-        ax2.set_xlabel("زمان میانی (T)")
-        ax2.set_ylabel("سرعت میانگین (V_avg)")
-        ax2.set_title("نمودار سرعت میانگین (بین نقاط)")
+        ax2.set_xlabel("(T)")
+        ax2.set_ylabel("(V_avg)")
+        ax2.set_title("(Average Velocity Plot)")
         ax2.grid(True)
 
     # a_avg در زمان‌های میانی سرعت
     if rows == 3 and len(a_avg) > 0:
         ax3.plot(t_mid_a, a_avg, marker='o', label='a_avg')
-        ax3.set_xlabel("زمان میانی سرعت (T)")
-        ax3.set_ylabel("شتاب میانگین (A_avg)")
-        ax3.set_title("نمودار شتاب میانگین (بین سرعت‌های متوالی)")
+        ax3.set_xlabel("(T)")
+        ax3.set_ylabel("(A_avg)")
+        ax3.set_title("(Average Acceleration Plot)")
         ax3.grid(True)
 
     return fig
