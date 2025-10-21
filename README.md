@@ -175,5 +175,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ### **Contact:**
-For any further questions or suggestions, feel free to reach out at [your email or GitHub contact info].
+For any further questions or suggestions, feel free to reach out at [[Linkedin](https://www.linkedin.com/in/kourosh-zahednia/)].
 
