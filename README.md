@@ -4,12 +4,12 @@
 ![Banner](https://github.com/zahednia/TelegramPhysic/blob/main/photo.jpg)  <!-- Add your image path here -->
 
 ## **Description:**
-This is a **Telegram bot** designed to help users calculate physical quantities like average velocity, average acceleration, and displacement from a set of time-location data. The bot uses a simple and user-friendly interface to allow users to input their time and location values, then computes various physics formulas and presents the results with **visual graphs**.
+This is a **Telegram bot** designed to help users calculate physical quantities like average velocity, average acceleration, and displacement from a set of time-location data. The bot now supports **3D calculations** for position, velocity, and acceleration vectors, allowing for more detailed analysis of movement in three dimensions. Users input their time and location values, and the bot computes various physics formulas and presents the results with **visual graphs**.
 
 🎯 **Key Features:**
-- 📐 Calculates average velocity (`V_avg`), average acceleration (`A_avg`), and overall displacement (`S_avg`).
+- 📐 Calculates **average velocity** (`V_avg`), **average acceleration** (`A_avg`), and **overall displacement** (`S_avg`) in **3D**.
 - 📊 Displays results in a clean and understandable format.
-- 📈 Generates graphs for time vs. position, average velocity, and acceleration.
+- 📈 Generates **3D graphs** for time vs. position, average velocity, and acceleration.
 - 💬 Interactive user experience using **Telegram buttons** to guide the user through the data input and calculation process.
 
 ---
@@ -76,7 +76,7 @@ pip install python-telegram-bot numpy matplotlib
 2. **Data Input:**
    The bot will ask for the following information:
    - 🕒 **Time (T)**: Enter the time at which a measurement was taken.
-   - 📍 **Location (X)**: Enter the location (or position) corresponding to the time.
+   - 📍 **Location (X)**: Enter the 3D location (position) corresponding to the time.
 
    You can add multiple points for more accurate calculation. After entering at least two points, you can proceed to the calculations.
 
@@ -85,46 +85,46 @@ pip install python-telegram-bot numpy matplotlib
    - **Average Velocity (V_avg)**: Calculates the average velocity between each pair of points.
    - **Average Acceleration (A_avg)**: Computes the average acceleration between each pair of velocities.
    - **Overall Displacement (S_avg)**: Computes the total displacement between the first and last points.
-   
-   The bot will also generate a graph with time vs. position, average velocity, and average acceleration.
+
+   The bot will also generate a graph with time vs. position, average velocity, and average acceleration in 3D.
 
 4. **Sample Input & Output:**
 
    **Input:**
    ```
-   Time: 0   Location: 0
-   Time: 1   Location: 4
-   Time: 2   Location: 5
-   Time: 3   Location: 2
+   Time: 0   Location: [5, 1, 1]
+   Time: 1   Location: [7, 8, 1]
+   Time: 2   Location: [12, 23, 1]
+   Time: 3   Location: [23, 32, 1]
    ```
-   
+
    **Output:**
    ```
    ✅ **Calculations Completed:**
-   
+
    1️⃣ **Average Velocity between each pair of points:**
    V_avg = ΔX / ΔT
-   Results: V_avg = [4.0, 1.0, -3.0]
-   
+   Results: V_avg = [[2.0, 7.0, 0.0], [2.5, 7.5, 0.0]]
+
    2️⃣ **Average Acceleration between velocities:**
    A_avg = ΔV / ΔT
-   Results: A_avg = [-3.0, -4.0]
-   
+   Results: A_avg = [[0.3333, 0.3333, 0.0]]
+
    3️⃣ **Overall Displacement (S_avg):**
    S_avg = ΔX / ΔT
-   S_avg = (2 - 0) / (3 - 0) = 2 / 3 = 0.6667
-   
+   S_avg = ([12. 23. 1.] - [5. 1. 1.]) / (3.0 - 0.0) = 4.0 / 3.0 = [2.3333 7.3333 0.    ]
+
    🔹 **Summary:**
-   V_avg: [4.0, 1.0, -3.0]
-   A_avg: [-3.0, -4.0]
-   S_avg: 0.667
+   V_avg: [2.0, 7.0, 0.0]
+   A_avg: [0.3333, 0.3333, 0.0]
+   S_avg: [2.3333, 7.3333, 0.0]
    ```
 
 5. **Graphs:**
    After the calculations, the bot will provide a graphical representation of:
-   - 📍 Time vs. Position
-   - ⚡ Time vs. Average Velocity
-   - 📉 Time vs. Average Acceleration
+   - 📍 Time vs. Position (3D)
+   - ⚡ Time vs. Average Velocity (3D)
+   - 📉 Time vs. Average Acceleration (3D)
 
 ---
 
