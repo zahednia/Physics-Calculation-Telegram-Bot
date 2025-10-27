@@ -1,7 +1,7 @@
 
 # Physics Calculation Telegram Bot
 
-![Banner](https://github.com/zahednia/TelegramPhysic/blob/main/photo.jpg)  <!-- Add your image path here -->
+![Banner](https://github.com/zahednia/Physics-Calculation-Telegram-Bot/blob/main/photo.jpg)  <!-- Add your image path here -->
 
 ## **Description:**
 This is a **Telegram bot** designed to help users calculate physical quantities like average velocity, average acceleration, and displacement from a set of time-location data. The bot now supports **3D calculations** for position, velocity, and acceleration vectors, allowing for more detailed analysis of movement in three dimensions. Users input their time and location values, and the bot computes various physics formulas and presents the results with **visual graphs**.
